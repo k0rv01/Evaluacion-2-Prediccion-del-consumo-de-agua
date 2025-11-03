@@ -9,17 +9,6 @@ import numpy as np
 ruta = 'consumo_agua_comunas.csv'
 separador = ','
 
-# Funcion de limpieza
-exito, df_consumo_agua, mensaje = limpiador_csv(ruta, sep=separador)
-
-if exito:
-    print("La limpieza se realizo con exito.")
-    print(f"Mensaje:{mensaje}")
-else:
-    print(f"La limpieza fallo: {mensaje}")
-
-
-
 #Convertir variables categóricas (Comuna, Region) en numéricas
 df_procesado = pd.get_dummies(df_consumo_agua, columns=['comuna', 'region'], drop_first=True)
 
