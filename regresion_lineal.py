@@ -25,7 +25,7 @@ print("Años considerados para el estudio:", df_consumo_agua["año"].unique(), "
 columnas_a_limpiar = ['consumo_m3', 'precipitacion_mm', 'ingreso_promedio']
 
 #2. Datos de entrenamiento [2020-2023]
-train = df_consumo_agua[(df_consumo_agua["año"] < 2021)]
+train = df_consumo_agua[(df_consumo_agua["año"] < 2024)]
 
 
 #3. Datos de prueba [2024]
